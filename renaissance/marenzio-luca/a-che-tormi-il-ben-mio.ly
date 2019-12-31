@@ -1,44 +1,8 @@
 \language "english"
 
 global = {
-  \set Score.skipBars = ##t
-
-  % incipit
-  %\once \hide Score.SystemStartBracket
-  % Set tight spacing
-  \override Score.SpacingSpanner.spacing-increment = #1.0
-  \key f \major
-  \time 4/4
-  \once \override Staff.TimeSignature.style = #'mensural
-  \override Voice.NoteHead.style = #'petrucci
-  \override Voice.Rest.style = #'petrucci
-  \set Staff.printKeyCancellation = ##f
-  \cadenzaOn % turn off bar lines
-  \skip 1*1
-  \once \override Staff.BarLine.transparent = ##f
-  \bar "||"
-  \skip 1*1 % need this extra \skip such that clef change comes
-            % after bar line
-  \bar ""
-
-  % main
-  \cadenzaOff % turn bar lines on again
-  \once \override Staff.Clef.full-size-change = ##t
-  \set Staff.forceClef = ##t
   \key f \major
   \time 4/2
-  \override Voice.NoteHead.style = #'default
-  \override Voice.Rest.style = #'default
-
-  % Setting printKeyCancellation back to #t must not
-  % occur in the first bar after the incipit.  Dto. for forceClef.
-  % Therefore, we need an extra \skip.
-  \skip 1*1
-  \set Staff.printKeyCancellation = ##t
-  \set Staff.forceClef = ##f
-
-  % Remove this once accidentals are found and marked with \ficta.
-  %\set suggestAccidentals = ##t
 }
 
 ficta = { \once \set suggestAccidentals = ##t }
@@ -47,14 +11,7 @@ cantoNotes = {
   \transpose c' c'' {
     \set Staff.instrumentName = #"Canto  "
 
-    % incipit
-    \clef "petrucci-g"
-    c'1
-    \skip 1*1 % one bar
-
-    % main
     \clef "treble"
-    %\transpose f a
     \relative c' {
       % line 1
       c2. d4 c2 a8 bf8 c8 a8 bf4 a4 g2 a1
@@ -86,10 +43,6 @@ cantoNotes = {
 }
 
 cantoLyrics = \lyricmode {
-  % incipit
-  ""
-
-  % main
   % line 1
   A che tor -- mi'l - - - - ben mi -- o
   s'io di -- co di mo -- ri -- re
@@ -120,14 +73,7 @@ altoNotes = {
   \transpose c' c'' {
     \set Staff.instrumentName = #"Alto  "
 
-    % incipit
-    \clef "petrucci-c2"
-    f1
-    \skip 1*1 % one bar
-
-    % main
     \clef "treble"
-    %\transpose f a
     \relative c {
       % line 1
       r1*2 r1 r2 f2. e4 f2 d4 f4 e2 f2
@@ -157,10 +103,6 @@ altoNotes = {
 }
 
 altoLyrics = \lyricmode {
-  % incipit
-  ""
-
-  % main
   % line 1
   A che tor -- mi'l ben mi -- o
   A che tor -- mi'l ben mi -- o
@@ -195,14 +137,7 @@ tenoreNotes = {
   \transpose c' c' {
     \set Staff.instrumentName = #"Tenore  "
 
-    % incipit
-    \clef "petrucci-c3"
-    f'1
-    \skip 1*1 % one bar
-
-    % main
     \clef "treble_8"
-    %\transpose f a
     \relative c' {
       % line 1
       r2 f2. e4 f2 d4 f4 e2 f1
@@ -243,10 +178,6 @@ tenoreNotes = {
 }
 
 tenoreLyrics = \lyricmode {
-  % incipit
-  ""
-
-  % main
   % line 1
   A che tor -- mi'l ben mi -- o
   s'io di -- co di mo -- ri - - -- re
@@ -277,14 +208,7 @@ bassoNotes = {
   \transpose c' c' {
     \set Staff.instrumentName = #"Basso  "
 
-    % incipit
-    \clef "petrucci-c4"
-    c'1
-    \skip 1*1 % one bar
-
-    % main
     \clef "bass"
-    %\transpose f a
     \relative c' {
       % line 1
       r1*4 r1 r2 c2 f,4. g8 a4 c4 g2 c,2 c'2. d4 c2 a8 bf8 c8 a8 bf4 a4 g2 f1
@@ -305,10 +229,6 @@ bassoNotes = {
 }
 
 bassoLyrics = \lyricmode {
-  % incipit
-  ""
-
-  % main
   % line 1
   s'io di -- co di mo -- ri -- re
   A che tor -- mi'l - - - - ben mi -- o
@@ -330,14 +250,7 @@ quintoNotes = {
   \transpose c' c' {
     \set Staff.instrumentName = #"Quinto  "
 
-    % incipit
-    \clef "petrucci-c1"
-    c''1
-    \skip 1*1 % one bar
-
-    % main
     \clef "treble"
-    %\transpose f a
     \relative c'' {
       % line 1
       r1*2 r1 c2. d4 c2 a8 bf8 c8 a8 bf4 a4 g2 f2
@@ -366,10 +279,6 @@ quintoNotes = {
 }
 
 quintoLyrics = \lyricmode {
-  % incipit
-  ""
-
-  % main
   % line 1
   A che tor -- mi'l - - - - ben mi -- o
   s'io di -- co di mo -- ri - - -- re
