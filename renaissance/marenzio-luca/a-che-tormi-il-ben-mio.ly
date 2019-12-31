@@ -82,8 +82,10 @@ altoNotes = {
       r4 c4 c4 f4
 
       % line 2
-      f4 e4 d2 e2 g4 g8 g8 % ! last 4 notes originally e1 r1 g2 g4 g4
-      f1 e2 f2. g4 a2 g1 g2 f2 ef\breve d\breve c2
+      f4 e4 d2 e1 g2 g4 g4
+      f1 e2 
+        f4 g4 a2 g2 g2 f2 % ! was: f2. g4 a2 g1 g2 f2
+        ef\breve d\breve c2
         f2 f2 d2 e2 f2 g1 a1 f\breve f1 e1
       r2 a1 g4 g4
 
