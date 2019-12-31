@@ -398,8 +398,7 @@ quintoLyrics = \lyricmode {
     \context {
       \Voice
 
-      % no slurs
-      \hide Slur
+      \consists "Ambitus_engraver"
 
       % The command below can be commented out in
       % short scores, but especially for large scores you
