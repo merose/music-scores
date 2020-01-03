@@ -47,7 +47,7 @@ cantoNotes = {
       r2 r2 r4 c4 c4 g4 a4 b4 c4 d4 e2 e2 d2. c4 c2. b8 a8 b2 c\breve
     }
     \override Staff.BarLine.transparent = ##f
-    \bar "||"
+    \bar "|."
   }
 }
 
@@ -441,7 +441,7 @@ quintoLyrics = \lyricmode {
   title = "Ecco l'aurora con l'aurata fronte"
   subtitle = \markup { from \italic { Il Quarto Libro de Madrigali a Cinque Voci, } Apresso Angelo Gardano, 1594 }
   composer = "Luca Marenzio (ca. 1553 – 1599)"
-  arranger = "Mark Rose, ed. (2019)"
+  arranger = "Edited by Mark Rose (2020)"
   poet = "Vincenzo Quirino"
   tagline = ##f
   copyright = \markup {
@@ -546,7 +546,6 @@ quintoLyrics = \lyricmode {
   \vspace #0.5
   \column {
     \line { Scan of original part books from https://imslp.org/wiki/Madrigali_a_5_voci%2C_Libro_4_(Marenzio%2C_Luca). }
-    \line { Tenor line in original was longer than other parts. Corrected by editor as indicated. }
   }
   \vspace #1
 }
@@ -565,6 +564,18 @@ quintoLyrics = \lyricmode {
       \line { C'homai d’intorno l’aere, tutto in alba }
     }
     \hspace #1
+  }
+}
+
+\markup {
+  \column {
+    \vspace #1
+    \line { \bold Notes }
+    \vspace #0.5
+    \line { Canto m10: written as "fróte" in original }
+    \line { Canto m46–47: "nell'adverso" in original (doesn't match m40–41) }
+    \line { Alto m46–47: "nell'adverso" in original (doesn't match m41–42) }
+    \line { Tenore: part in original was 6 semibreves too long. Shortened by editor as indicated in measures 27, 37–38, 65, and 75–76. }
   }
 }
 
