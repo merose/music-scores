@@ -535,7 +535,7 @@ quintoLyrics = \lyricmode {
       \remove "Forbid_line_break_engraver"
     }
   }
-  \midi { }
+  \midi { \tempo 2 = 80 }
 }
 
 \markuplist {
