@@ -410,7 +410,7 @@ quintoLyrics = \lyricmode {
 
   % line 3
   mo -- ri
-  So -- pra~i duo lie - - - - - - - - ti
+  So -- pra~i due lie - - - - - - - - ti
   e for -- tu -- na -- ti~A -- man -- ti
   Spar -- gan Ghir -- lan - - - - -- de~e fio -- ri
 
@@ -588,7 +588,7 @@ Translate. }
     \line { Canto m53, etc.: Syllable assignment of \italic { Hymeneo } to notes is unclear. }
     \line { Basso m76-end: Bass part was shorter than the others. Two bars repeated to match other parts. }
     \line { \italic { Hymeneo } = Hymen, a Greek god associated with marriage }
-    \line { \italic { Fillide } and \italic { Tirsi } = Phyllis and Thyrsis, characters in Virgil's \italic { Eclogues } }
+    \line { \italic { Fillide e Tirsi } = Phyllis and Thyrsis, characters in Virgil's \italic { Eclogues } }
   }
 }
 
