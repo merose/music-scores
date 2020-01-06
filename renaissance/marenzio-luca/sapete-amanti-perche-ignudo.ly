@@ -163,16 +163,42 @@ altoNotes = {
 
 altoLyrics = \lyricmode {
   % line 1
+  Sa -- pe -- te~a -- man -- ti
+  Sa -- pe -- te~a -- man -- ti
+  per -- che~i -- gnu -- do si -- a
+  per -- che~i -- gnu -- do si -- a
+  Per --
 
   % line 2
+  che fan -- ciul -- lo
+  Per -- che fan -- ciul -- lo
+  e per -- che
+  e per -- che cie -- co~a -- mo -- re
+  Per -- che
+  Per -- che
+  Per -- che men -- tre l'an --
 
   % line 3
+  ge -- li -- ca~har -- mo -- ni -- a - -
+  in -- ten -- to vdi -- a
+  De la mia bel -- la Don -- na
+  in -- ten -- to vdi -- a
+  in -- ten -- to vdi -- a
+  Per
 
   % line 4
+  gran dol -- cez -- za
+  vsci - -- to di se fuo -- re
+  Per -- dè la ve -- ste
+  Per -- dè la ve -- ste
+  il sen -- no gl'oc -- ch'e'l co - - - -- re
+  Per --
 
   % line 5
-
-  % line 6
+  dè la ve -- ste
+  Per -- dè la ve -- ste
+  il sen -- no gl'oc -- ch'e'l co - - - -- re
+  gl'oc -- ch'e'l co -- re
 }
 
 tenoreNotes = {
@@ -223,14 +249,32 @@ tenoreNotes = {
 
 tenoreLyrics = \lyricmode {
   % line 1
+  Sa -- pe -- te~a -- man -- ti
+  per -- che~i -- gnu -- do si -- a
+  Sa -- pe -- te~a -- man -- ti
+  per -- che~i -- gnu -- do si -- a
 
   % line 2
+  Per -- che
+  per -- che
+  per -- che men -- tre l'an -- ge -- li -- ca~har -- mo -- ni -- a
+  De la mia bel -- la Don -- na
+  De la mia bel -- la Don -- na
 
   % line 3
+  in -- ten -- to vdi -- a
+  vdi - -- a
+  Per gran dol -- cez -- za
+  vsci -- to di se fuo -- re
+  vsci - -- to di se fuo -- re
+  Per -- dè la ve -- ste
+  il
 
   % line 4
-
-  % line 5
+  sen -- no gl'oc -- ch'e'l co -- re
+  Per -- dè la ve -- ste
+  il sen -- no gl'oc -- ch'e'l co -- re
+  gl'oc -- ch'e'l co -- re
 }
 
 bassoNotes = {
@@ -283,12 +327,31 @@ bassoNotes = {
 
 bassoLyrics = \lyricmode {
   % line 1
+  Sa -- pe -- te~a -- man -- ti
+  per -- che~i -- gnu -- do si -- a
+  Per -- che
+  Per -- che
+  per -- che men -- tre l'an --
 
   % line 2
+  ge -- li -- ca~har -- mo -- ni -- a
+  De la mia bel -- la Don -- na
+  De la mia bel -- la Don -- na
+  in -- ten -- to vdi -- a
+  in -- ten -- to vdi -- a
+  Per
 
   % line 3
+  gran dol -- cez -- za
+  vsci - -- to di se fuo -- re
+  Per -- dè la ve -- ste
+  Per -- dè la ve -- ste
+  il sen -- no
+  Per -- dè la ve -- ste
+  Per -- dè la ve -- ste
 
   % line 4
+  il sen -- no gl'oc -- ch'e'l co -- re
 }
 
 quintoNotes = {
@@ -343,23 +406,45 @@ quintoNotes = {
 
 quintoLyrics = \lyricmode {
   % line 1
+  Sa -- pe -- te~a -- man -- ti per -- che~i -- gnu -- do si -- a
+  Sa -- pe -- te~a -- man -- ti per -- che~i -- gnu -- do si -- a
+  Per --
 
   % line 2
+  che fan -- ciul -- lo
+  Per -- che fan -- ciul -- lo
+  Per -- che fan -- ciul -- lo
+  e per -- che
+  e per -- che cie -- co~a -- mo - - - -- re
+  Per --
 
   % line 3
+  che
+  Per -- che
+  Per -- che men -- tre l'an -- ge -- li -- ca~har -- mo -- ni -- a
+  in -- ten -- to vdi -- a
+  De la mia bel -- la Don -- na
+  in --
 
   % line 4
+  ten -- to vdi -- a
+  Per gran dol -- cez -- za
+  vsci - -- to di se fuo -- re
+  Per -- dè la ve -- ste
+  Per -- dè la ve -- ste~il sen -- no gl'oc -- ch'e'l co --
 
   % line 5
-
-  % line 6
+  re
+  Per -- dè la ve -- ste
+  Per -- dè la ve -- ste~il sen -- no gl'oc -- ch'e'l co -- re
+  gl'oc -- ch'e'l co - - - - - - - -- re
 }
 
 \header{
   title = "Sapete amanti perche ignudo sia"
   subtitle = \markup { from \italic { Il Quarto Libro de Madrigali a Cinque Voci, } Apresso Angelo Gardano, 1594 }
   composer = "Luca Marenzio (ca. 1553 – 1599)"
-  arranger = "Edited by Mark Rose (2020)"
+  %arranger = ""
   poet = "Valerio Marcellini"
   tagline = ##f
   copyright = \markup {
@@ -463,13 +548,14 @@ quintoLyrics = \lyricmode {
     \vspace #1
     \line { \bold Notes }
     \vspace #0.5
+    \line { \italic { gl'occh'e'l core } is \italic { gli occhi e il core, } so an approximate IPA is: ljɔ kjeil kɔ re }
   }
 }
 
 \markup {
-  \vspace #1
+  \vspace #2
   \fill-line {
-    \hspace #3
+    \hspace #1
     \column {
       \line { Sapete amanti, perche ignudo sia, }
       \line { Perche fanciullo, e perche cieco Amore? }
