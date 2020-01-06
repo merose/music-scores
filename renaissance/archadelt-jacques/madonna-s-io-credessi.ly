@@ -167,7 +167,7 @@ tenoreNotes = {
     \relative c {
       % line 1
       r1 f1 f2 f2 c'1. d2 e1 c1
-      r2 c2 c2 bf2 c2. d4 e2 d2
+      r2 c2 c2 bf2^\markup { ? } c2. d4 e2 d2
       r2 c2 d1. c2 c2 bf2 c2 c2
       r2 c2 c1. f,2 bf2 c2
 
