@@ -443,7 +443,7 @@ quintoLyrics = \lyricmode {
   composer = "Luca Marenzio (ca. 1553 – 1599)"
   arranger = "Edited by Mark Rose (2020)"
   %poet = "???"
-  tagline = ##f
+  tagline = "Typeset in Lilypond by Mark Rose. Updated 2020–01–08."
   copyright = \markup {
     \column {
       \line { This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. }
@@ -582,6 +582,7 @@ Translate. }
   \column {
     \line { \bold Notes }
     \vspace #0.5
+    \line { Musica ficta accidentals added by editor are shown above the notes. }
     \line { Quinto m35: Was \italic { Sparga' } in original. Changed to match other parts. }
     \line { Alto m35: Was \italic { Sparga } in original. Changed to match other parts. }
     \line { m50: A triple meter in the canto is indicated in the original. Other parts have been adjusted to match. }
