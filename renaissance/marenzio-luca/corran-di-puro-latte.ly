@@ -140,7 +140,7 @@ altoNotes = {
       % triplet bar in original
       r2.
 
-      f1 d1 g1 f2. f4 d2 d2 g2 g2 f2. e8 d8 g2 c,2 d2. c4 bf1 a1
+      f1 d1 g1 f2. f4 d2 d2 g2 g2 f2. \ficta ef8 d8 g2 c,2 d2. c4 bf1 a1
       r2 f'2
       r4 f2 a4 f4 e4
 
@@ -225,7 +225,7 @@ tenoreNotes = {
       % just before triplet bar in canto; adjusting rhythm to match canto
       c2~ c2. a2 % ! was: c1 a1
       d1 g,1 c1 f,1 bf2 bf2 c2. bf4 bf2. a8 g8 a2 d,2
-          f2. e8 d8 e2 f1
+          f2. e?8 d8 e2 f1
       r1 r\breve c'4. c8 c2
 
       % line 5
@@ -381,7 +381,7 @@ quintoNotes = {
       a1 g1 e1
 
       % line 5
-      a2. a4 f2 f2 ef2 ef2 d1 e?1
+      a2. a4 f2 f2 ef2 ef2 d1 \ficta ef1
       f1 g1 c,1 % ! written as: f\breve g\breve c,\breve
       c'2
       r4 a2 c4 a4 f4 c'2 c2 g4. g8 g2 a4. a8 a2 d2 c2
