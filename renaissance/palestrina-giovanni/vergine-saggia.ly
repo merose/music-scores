@@ -60,7 +60,7 @@ cantoNotes = {
 }
 
 cantoLyrics = \lyricmode {
-      Ver -- gi -- ne sag -- gia e del bel num -- mer'
+      Ver -- gi -- ne sag -- gia e del bel nu -- mer'
       % p7 system 1
       u -- na e del bel nu -- mer' u -- na del -- le be -- a -- te
       Ver -- gi --
@@ -410,7 +410,7 @@ quintoNotes = {
       % p10 system 2
       c4 d4 e2 | f2 r2 | r1 | r2 r4 c4 | c4 f4 e2 | f1 | r1 |
       % p10 system 3
-      r4 r4 g2 | a2 r2 | r1 | r4 c,2 d4~ | d4 e2 f4~ |
+      r4 f4 g2 | a2 r2 | r1 | r4 c,2 d4~ | d4 e2 f4~ |
       f4 d4 e4 d4~ | d4 \ficta cs8 b8 cs2 |
       % p11 system 1
       d2 r4 c4 | c4 f4 e2 | f4 c2 d4 | e2 f4 a4 | g4. f8 e4 a,4 |
@@ -461,7 +461,7 @@ quintoLyrics = \lyricmode {
       che scon -- si -- glia -- to
       % p10 system 3
       a te vien,
-      a te vien per con -- si - - - --
+      a te vien per con -- si - - - - --
       % p11 system 1
       glio,
       che scon -- si -- glia -- to a te vien per con -- si - - -- glio,
