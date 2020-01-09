@@ -473,7 +473,12 @@ quintoLyrics = \lyricmode {
   subtitle = ##f
   composer = "Giovanni Pierluigi da Palestrina (1525 – 1594)"
   %arranger = ""
-  %poet = "???"
+  poet = \markup {
+    \column {
+      \line { "Francesco Petrarca (1304 – 1374)" }
+      \line { from \italic { The Conzoniere } }
+    }
+  }
   tagline = ##f
   copyright = \markup {
     \column {
@@ -572,10 +577,50 @@ quintoLyrics = \lyricmode {
 \markuplist {
   \vspace #1
   \column {
-    \line { Scan of original part books from https://imslp.org/wiki/Madrigali_a_5_voci%2C_Libro_4_(Marenzio%2C_Luca). }
-    \vspace #1
-    \line { \bold Notes }
-    \vspace #0.5
+    \line { Transcribed from http://ks.imslp.net/files/imglnks/usimg/0/01/IMSLP55991-PMLP115701-Tomus_XXIX.pdf. }
+    %\vspace #1
+    %\line { \bold Notes }
+    %\vspace #0.5
+  }
+}
+
+\markup {
+  \vspace #2
+  \fill-line {
+    \hspace #1
+    \column {
+      \line { Vergine saggia, e del bel numer' una }
+      \line { De le beate vergini prudenti, }
+      \line { Anzi la prima e con più chiara lampa; }
+      \line { O salso scudo de l'afflitte genti }
+      \line { Contra' colpi di Morte e di Fortuna, }
+      \line { Sotto 'l qual si trionfa, non pur scampa; }
+      \line { O refrigerio al cieco ardor ch'avvampa }
+      \line { Qui fra' mortali sciocchi: }
+      \line { Vergine, que' begli occhi, }
+      \line { Che vider trisi la spietata stampa }
+      \line { Ne' dolci membri del tuo caro figlio, }
+      \line { Volgi al mio dubbio stato, }
+      \line { Che sconsigliato a te vien per consiglio. }
+    }
+    \hspace #2
+    \column {
+      \line { Wisest Virgin, and of that lovely number }
+      \line { one of the virgins blessed with prudence, }
+      \line { rather the first of them, and with the brightest lamp: }
+      \line { O solid shield for the oppressed peoples }
+      \line { against the blows of Death and Fortune, }
+      \line { under whom we triumph, not just escape: }
+      \line { O coolness for blind heat that flares }
+      \line { among foolish mortals here: }
+      \line { Virgin, turn those lovely eyes, }
+      \line { that saw in sadness the pitiless wounds }
+      \line { in the sweet limbs of your dear Son, }
+      \line { on my uncertain state, }
+      \line { who, without counsel, come to you for counsel. }
+      \line { – translation by A. S. Kline }
+    }
+    \hspace #1
   }
 }
 
