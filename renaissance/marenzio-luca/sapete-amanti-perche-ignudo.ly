@@ -15,7 +15,7 @@ cantoNotes = {
     \relative c'' {
       % line 1
       % Sapete
-      r\breve r1 c2 c4 c4 d2 e2 e4. e8 e4 g4 fs2 g4
+      r\breve r1 c2 c4 c4 d2 e2 e4. d8 e4 g4 fs2 g4
       % Sapete
       c,4 c4 c4 f2 d2
       r2 bf4. c8 bf4 a4 c2 c4
@@ -106,9 +106,9 @@ altoNotes = {
       % line 1
       % Sapete amanti
       f2 f4 f4 g2 a1
-      r2 r1 r1 r4 g4 g4 e4 \ficta fs2 e2
+      r2 r1 r1 r4 g4 g4 e4 a2 g2
       % perche ignudo
-      a4. f8 a4 c4 b2 c2
+      a4. g8 a4 c4 b2 c2
       % perche ignudo
       f,4. f8 f4 f4 g2 a2
       % Per-
@@ -394,7 +394,8 @@ quintoNotes = {
       % vscito
       r2 d4 f4 d4 f4. e8 d4 d2
       % Perdè la veste
-      r2 d4 e8 f8 g2 a4 d,4 e8 f8 g4 a2 bf1 c1 g2 f2 g1
+      r2 r4 d4 e8 f8 g4 % ! was: r2 d4 e8 f8 g2
+      a4 d,4 e8 f8 g4 a2 bf1 c1 g2 f2 g1
 
       % line 5
       a2
@@ -444,9 +445,9 @@ quintoLyrics = \lyricmode {
   title = "Sapete amanti perche ignudo sia"
   subtitle = \markup { from \italic { Il Quarto Libro de Madrigali a Cinque Voci, } Apresso Angelo Gardano, 1594 }
   composer = "Luca Marenzio (ca. 1553 – 1599)"
-  %arranger = ""
+  arranger = "Edited by Mark Rose (2020)"
   poet = "Valerio Marcellini"
-  tagline = ##f
+  tagline = "Typeset in LilyPond by Mark Rose. First version, 2020–01–08."
   copyright = \markup {
     \column {
       \line { This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. }
@@ -549,6 +550,7 @@ quintoLyrics = \lyricmode {
     \line { \bold Notes }
     \vspace #0.5
     \line { \italic { gl'occh'e'l core } is \italic { gli occhi e il core, } so an approximate IPA is: ljɔ kjeil kɔ re }
+    \line { Quinto m48–48: Rhythm adjusted to match basso, to mirror m56–57. }
   }
 }
 
