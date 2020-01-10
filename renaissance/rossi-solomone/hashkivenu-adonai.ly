@@ -693,10 +693,10 @@ ottavoLyrics = \lyricmode {
 \header{
   title = "Hashkivenu adonai"
   subtitle = ##f
-  composer = "Salomone Rossi"
+  composer = "Salamone Rossi"
   arranger = "Edited by Mark Rose (2020)"
   %poet = "???"
-  tagline = ##f
+  tagline = "Typeset in LilyPond by Mark Rose. First version, 2020–01–10."
   copyright = \markup {
     \column {
       \line { This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. }
