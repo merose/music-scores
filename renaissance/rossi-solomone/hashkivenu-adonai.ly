@@ -163,7 +163,7 @@ altoNotes = {
 
       % line 4
       % m25
-      a1 fs2 fs4 fs4 fs2 d4 d4 e1 e2 a2 gs1 a2 a4 g4 fs2. g4 e2. fs4 g2
+      a1 fs2 fs4 fs4 fs2 d4 d4 e1 e2 a2 gs1 a2 a4 g?4 fs2. g4 e2. fs4 g2
       e4 e4 f2 c2 c2 b2 c1
 
       % line 5
