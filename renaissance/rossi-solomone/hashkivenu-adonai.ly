@@ -1,8 +1,14 @@
 \language "english"
 
+fast = 140
+slow = 70
+
 global = {
   \key c \major
   \time 3/2
+  % Tempo is just for the MIDI output, so don't show it in the score.
+  \set Score.tempoHideNote = ##t
+  \tempo 2 = \fast
 }
 
 ficta = { \once \set suggestAccidentals = ##t }
@@ -24,6 +30,7 @@ cantoNotes = {
       r2 r2 g2 c1 b2 a2 a2 a2 a2 gs2 gs2
       % m17
       \time 4/2
+      \tempo 2 = \slow
       a2 c4 c4 c2 b4 b4 a1 g2. g4
 
       % line 3
@@ -48,9 +55,11 @@ cantoNotes = {
       % line 6
       % m36
       \time 3/2
+      \tempo 2 = \fast
       r1. e2 d2 c2 b1 cs2 d2 c?2 b2 a1 c2 b2. c4 d2 g,2 c2 c2
       % m43
       \time 4/2
+      \tempo 2 = \slow
       b2 a2 a2. a4 a1
 
       % line 7
@@ -61,6 +70,7 @@ cantoNotes = {
       a1 c1 b2. c4 d2 a1 gs2
       % m50
       \time 3/2
+      \tempo 2 = \fast
       a1. r2 a2 a2 d1 c2 b1
 
       % line 8
@@ -69,6 +79,7 @@ cantoNotes = {
       g,1 a2 b1 b2 r2 g2 g2 c1 b2 a1 g2 f2. g4 a2
       % m60
       \time 4/2
+      \tempo 2 = \slow
       g4 g4 d'2 c2 c2 b2 b4 b4 a2
 
       % line 9
@@ -585,118 +596,13 @@ quintoLyrics = \lyricmode {
   Y' -- ru -- sha -- la -- yim
 }
 
-sestoNotes = {
-  \transpose c' c' {
-    \set Staff.instrumentName = #"Sesto  "
-
-    \clef "treble_8"
-    \relative c' {
-      % line 1
-      
-      % line 2
-
-      % line 3
-
-      % line 4
-
-      % line 5
-
-      % line 6
-    }
-  }
-}
-
-sestoLyrics = \lyricmode {
-  % line 1
-
-  % line 2
-
-  % line 3
-
-  % line 4
-
-  % line 5
-
-  % line 6
-}
-
-settimoNotes = {
-  \transpose c' c' {
-    \set Staff.instrumentName = #"Settimo  "
-
-    \clef "treble_8"
-    \relative c' {
-      % line 1
-      
-      % line 2
-
-      % line 3
-
-      % line 4
-
-      % line 5
-
-      % line 6
-    }
-  }
-}
-
-settimoLyrics = \lyricmode {
-  % line 1
-
-  % line 2
-
-  % line 3
-
-  % line 4
-
-  % line 5
-
-  % line 6
-}
-
-ottavoNotes = {
-  \transpose c' c' {
-    \set Staff.instrumentName = #"Ottavo  "
-
-    \clef "treble_8"
-    \relative c' {
-      % line 1
-      
-      % line 2
-
-      % line 3
-
-      % line 4
-
-      % line 5
-
-      % line 6
-    }
-  }
-}
-
-ottavoLyrics = \lyricmode {
-  % line 1
-
-  % line 2
-
-  % line 3
-
-  % line 4
-
-  % line 5
-
-  % line 6
-}
-
 \header{
   title = "Hashkivenu adonai"
   subtitle = ##f
   composer = "Salamone Rossi"
   arranger = "Edited by Mark Rose (2020)"
   %poet = "???"
-  tagline = "Typeset in LilyPond by Mark Rose. First version, 2020–01–10."
+  tagline = "Typeset in LilyPond by Mark Rose. Updated version, 2020–01–16."
   copyright = \markup {
     \column {
       \line { This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. }
@@ -723,7 +629,9 @@ ottavoLyrics = \lyricmode {
 \markup { \vspace #1 }
 
 \score {
-  \new ChoirStaff = choirStaff <<
+  \new ChoirStaff = choirStaff \with {
+    midiInstrument = #"oboe"
+  } <<
     \new Voice = "cantoNotes" \with {
       \remove "Note_heads_engraver"
       \consists "Completion_heads_engraver"
@@ -765,44 +673,9 @@ ottavoLyrics = \lyricmode {
       \consists "Completion_rest_engraver"
     } << \global \bassoNotes >>
     \new Lyrics = "bassoLyrics" \lyricsto bassoNotes { \bassoLyrics }
-
-%    \new Voice = "sestoNotes" \with {
-%      \remove "Note_heads_engraver"
-%      \consists "Completion_heads_engraver"
-%      \remove "Rest_engraver"
-%      \consists "Completion_rest_engraver"
-%    } << \global \sestoNotes >>
-%    \new Lyrics = "sestoLyrics"
-%      \lyricsto sestoNotes { \sestoLyrics }
-
-%    \new Voice = "settimoNotes" \with {
-%      \remove "Note_heads_engraver"
-%      \consists "Completion_heads_engraver"
-%      \remove "Rest_engraver"
-%      \consists "Completion_rest_engraver"
-%    } << \global \settimoNotes >>
-%    \new Lyrics = "settimoLyrics"
-%      \lyricsto settimoNotes { \settimoLyrics }
-
-%    \new Voice = "ottavoNotes" \with {
-%      \remove "Note_heads_engraver"
-%      \consists "Completion_heads_engraver"
-%      \remove "Rest_engraver"
-%      \consists "Completion_rest_engraver"
-%    } << \global \ottavoNotes >>
-%    \new Lyrics = "ottavoLyrics"
-%      \lyricsto ottavoNotes { \ottavoLyrics }
-
   >>
 
   \layout {
-    \context {
-      \Score
-
-      % incipit should not start with a start delimiter
-      \remove "System_start_delimiter_engraver"
-    }
-
     \context {
       \Voice
 
@@ -816,7 +689,7 @@ ottavoLyrics = \lyricmode {
       \remove "Forbid_line_break_engraver"
     }
   }
-  \midi { \tempo 2 = 80 }
+  \midi { }
 }
 
 \markuplist {
@@ -869,19 +742,5 @@ ottavoLyrics = \lyricmode {
     \hspace #1
   }
 }
-
-% Hashkivenu adonai eloheinu l'shalom,
-% V'ha-amideinu malkeinu l'chayim ul'shalom.
-% Ufros aleinu sukat sh'lomecha,
-% v'hagein ba-adeinu
-% V'tak'einu b'eitza tova mil'fanecha,
-% V'hoshieinu l'ma-an sh'mecha.
-% V'haseir mei-aleinu oyeiv,
-% dever v'cherev v'ra-av v'yagon vaanacha;
-% Ush'vor satan mil'fanecha umei-achareinu,
-% Ushmor tzeiteinu uvo-einu mei-atah v'ad olam.
-% Ufros aleinu sukat sh'lomecha.
-% Baruch ata adonai, haporeis sukat shalom aleinu,
-% V'al kol amo Yisrael v'al Y'rushalayim
 
 \version "2.18.2"  % necessary for upgrading to future LilyPond versions.
