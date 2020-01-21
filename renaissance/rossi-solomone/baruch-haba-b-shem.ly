@@ -6,6 +6,7 @@ resultKey = g
 global = {
   \key \resultKey \major
   \time 2/2
+  \tempo 2 = 70
 }
 
 ficta = { \once \set suggestAccidentals = ##t }
@@ -443,7 +444,9 @@ ottavoLyrics = \lyricmode {
 \markup { \vspace #1 }
 
 \score {
-  \new ChoirStaff = choirStaff <<
+  \new ChoirStaff = choirStaff \with {
+    midiInstrument = #"oboe"
+  } <<
     \new Voice = "cantoNotes" \with {
       \remove "Note_heads_engraver"
       \consists "Completion_heads_engraver"
@@ -519,13 +522,6 @@ ottavoLyrics = \lyricmode {
 
   \layout {
     \context {
-      \Score
-
-      % incipit should not start with a start delimiter
-      \remove "System_start_delimiter_engraver"
-    }
-
-    \context {
       \Voice
 
       \consists "Ambitus_engraver"
@@ -538,7 +534,7 @@ ottavoLyrics = \lyricmode {
       \remove "Forbid_line_break_engraver"
     }
   }
-  \midi { \tempo 2 = 60 }
+  \midi { }
 }
 
 \markuplist {
