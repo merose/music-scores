@@ -171,7 +171,7 @@ bassLyrics = \lyricmode {
   composer = "Sergei Rachmaninov (1873 – 1943)"
   arranger = "Edited by Mark Rose (2020)"
   %poet = "???"
-  tagline = "Typeset in LilyPond by Mark Rose. Updated version, 2020–01–25."
+  tagline = "Typeset in LilyPond by Mark Rose. Updated version, 2020–01–26."
   copyright = \markup {
     \column {
       \line { This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. }
@@ -271,7 +271,7 @@ bassLyrics = \lyricmode {
 \markuplist {
   \vspace #1
   \column {
-    \line { Scan of original part books from https://imslp.org/wiki/Deus_meus_(Rachmaninoff%2C_Sergei). }
+    \line { Scan of undated, published Muzyka score from https://imslp.org/wiki/Deus_meus_(Rachmaninoff%2C_Sergei). }
     \vspace #1
     \line { \bold Notes }
     \vspace #0.5
