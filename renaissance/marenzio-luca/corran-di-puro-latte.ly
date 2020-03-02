@@ -35,23 +35,7 @@ cantoNotes = {
       r2 r4 g4 a2 g2
 
       % triplet bar in original
-      \time 3/4
-      \tempo \markup {
-        \concat {
-          \smaller \general-align #Y #DOWN \note #"4" #1
-          " = "
-          \smaller \general-align #Y #DOWN \note #"4" #1
-        }
-      }
-      a4. bf8 c4
-      \time 2/2
-      \tempo \markup {
-        \concat {
-          \smaller \general-align #Y #DOWN \note #"4" #1
-          " = "
-          \smaller \general-align #Y #DOWN \note #"4" #1
-        }
-      }
+      \tuplet 3/2 { a2. bf4 c2 } % original was 1/2 time: a4. bf8 c4
 
       % line 5
       d1 b1 c2. c4 c1
@@ -138,7 +122,7 @@ altoNotes = {
       r2
 
       % triplet bar in original
-      r2.
+      r1
 
       f1 d1 g1 f2. f4 d2 d2 g2 g2 f2. \ficta ef8 d8 g2 c,2 d2. c4 bf1 a1
       r2 f'2
@@ -223,7 +207,7 @@ tenoreNotes = {
       r2
 
       % just before triplet bar in canto; adjusting rhythm to match canto
-      c2~ c2. a2 % ! was: c1 a1
+      c2~ c1 a2 % ! was: c1 a1
       d1 g,1 c1 f,1 bf2 bf2 c2. bf4 bf2. a8 g8 a2 d,2
           f2. e?8 d8 e2 f1
       r1 r\breve c'4. c8 c2
@@ -293,9 +277,9 @@ bassoNotes = {
       r2 r1 r\breve r1 r2 f2 e2 f2 g2 f2
       r2 r4 f4 d2 c2
 
-      % triplet bar in canto; adjusting rhythm to match
+      % triplet bar in canto
       r1
-      f2. % ! was: f1
+      f1
       d1 g1 c,2. c4 f1 bf,1 ef2 c2 d1 c1 bf2. a4 g1 f1
       r1 r\breve
 
@@ -375,9 +359,9 @@ quintoNotes = {
       r4 a4 g2 a8 bf8 c4 bf2 a2
       r4 bf4 c2 d2
       r2 r4
-      % just before triplet bar in canto; adjusting rhythm
+      % just before triplet bar in canto
       f,4 e2
-      f2. % ! was: f1
+      f1
       a1 g1 e1
 
       % line 5
@@ -443,7 +427,7 @@ quintoLyrics = \lyricmode {
   composer = "Luca Marenzio (ca. 1553 – 1599)"
   arranger = "Edited by Mark Rose (2020)"
   %poet = "???"
-  tagline = "Typeset in Lilypond by Mark Rose. Updated 2020–01–08."
+  tagline = "Typeset in Lilypond by Mark Rose. Updated 2020–03–01."
   copyright = \markup {
     \column {
       \line { This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. }
@@ -464,13 +448,15 @@ quintoLyrics = \lyricmode {
   bottom-margin = 0.5\in
 
   ragged-bottom = ##t
-  system-system-spacing #'basic-distance = 15
+  system-system-spacing.basic-distance = 15
 }
 
 \markup { \vspace #1 }
 
 \score {
-  \new ChoirStaff = choirStaff <<
+  \new ChoirStaff = choirStaff \with {
+    midiInstrument = #"oboe"
+  } <<
     \new Voice = "cantoNotes" \with {
       \remove "Note_heads_engraver"
       \consists "Completion_heads_engraver"
@@ -590,6 +576,7 @@ Translate. }
     \line { Basso m76-end: Bass part was shorter than the others. Two bars repeated to match other parts. }
     \line { \italic { Hymeneo } = Hymen, a Greek god associated with marriage }
     \line { \italic { Fillide e Tirsi } = Phyllis and Thyrsis, characters in Virgil's \italic { Eclogues } }
+    \line { m50: Triplet rhythm only appears in the canto; adjusted to duration of the other voices. }
   }
 }
 
