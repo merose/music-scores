@@ -207,7 +207,7 @@ tenoreNotes = {
       r2
 
       % just before triplet bar in canto; adjusting rhythm to match canto
-      c2~ c1 a2 % ! was: c1 a1
+      c1 a1
       d1 g,1 c1 f,1 bf2 bf2 c2. bf4 bf2. a8 g8 a2 d,2
           f2. e?8 d8 e2 f1
       r1 r\breve c'4. c8 c2
@@ -427,7 +427,7 @@ quintoLyrics = \lyricmode {
   composer = "Luca Marenzio (ca. 1553 – 1599)"
   arranger = "Edited by Mark Rose (2020)"
   %poet = "???"
-  tagline = "Typeset in Lilypond by Mark Rose. Updated 2020–03–01."
+  tagline = "Typeset in Lilypond by Mark Rose. Updated 2020–03–02."
   copyright = \markup {
     \column {
       \line { This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. }
